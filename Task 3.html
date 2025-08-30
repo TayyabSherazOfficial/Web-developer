@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website with Ball Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #FF5733;
+      text-decoration: underline;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px;
+      gap: 80px; 
+    }
+
+    .about-me {
+      background-color: #fff;
+      padding: 40px;
+      width: 50%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .about-me h2 {
+      font-size: 32px;
+      color: #333;
+    }
+
+    .about-me p {
+      font-size: 18px;
+      color: #555;
+      margin-top: 20px;
+    }
+    .balls {
+      display: flex;
+      flex-direction: row; 
+      gap: 20px;           
+      align-items: flex-end; 
+    }
+
+    .ball {
+      width: 50px;
+      height: 50px;
+      background-color: #513497;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    .ball:nth-child(2) { animation-delay: 0.3s; }
+    .ball:nth-child(3) { animation-delay: 0.6s; }
+    .ball:nth-child(4) { animation-delay: 0.9s; }
+    .ball:nth-child(5) { animation-delay: 1.2s; }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-90px); }
+      100% { transform: translateY(0); }
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      border-top: 2px solid #555;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Course</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-container">
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate web developer with a love for coding and design. I specialize in front-end development and have experience working with various web technologies including HTML, CSS, and JavaScript. I aim to create user-friendly and responsive websites that provide great user experiences. I am always learning and improving my skills to stay up-to-date with the latest trends in web development.</p>
+    </section>
+
+    <div class="balls">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </div>
+
+  <footer>
+     My Website. TAYYAB SHERAZ
+  </footer>
+</body>
+</html>
